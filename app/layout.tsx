@@ -3,6 +3,8 @@ import { clx } from '@/utils/clx'
 
 // fonts
 import { Inter } from 'next/font/google'
+import { AppHooks } from './app-hooks'
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -18,7 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={clx(inter.className, 'bg-offwhite')}>{children}</body>
+      <body className={clx(inter.className)}>
+        <AppHooks />
+        {children}
+      </body>
     </html>
   )
 }
