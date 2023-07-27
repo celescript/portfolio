@@ -8,9 +8,9 @@ import { AppHooks } from './app-hooks'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Next.js Atomic Design Starter',
+  title: 'Celeste Fernandez Portfolio',
   description:
-    'A starter repository for Next.js using Atomic Design and Tailwind CSS',
+    'Celeste Fernandez is a software engineer based in Buenos Aires. She is passionate about building beautiful and functional user interfaces.',
 }
 
 export default function RootLayout({
@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={clx(inter.className)}>
+      <body className={clx(inter.className, 'bg-black')}>
         <AppHooks />
         {children}
       </body>
