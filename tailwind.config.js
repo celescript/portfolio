@@ -7,19 +7,6 @@ module.exports = {
   ],
   theme: {
     extend: {},
-    colors: {
-      offwhite: '#E2D9D2',
-      white: '#FFFFFF',
-      black: '#131312',
-      orange: {
-        DEFAULT: '#FFB876',
-        light: '#FFC38B',
-      },
-      pink: '#FF7AD2',
-      blue: '#6FBAFF',
-      transparent: 'transparent',
-      current: 'currentColor',
-    },
     fontSize: {
       // PX TO REM
       44: '2.75rem',
