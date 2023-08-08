@@ -22,7 +22,7 @@ export default function Button({
   return (
     <button
       className={clx(
-        'rounded-full flex items-center justify-center text-opacity-70 p-1',
+        'rounded-sm flex items-center justify-center text-opacity-70 p-1',
         buttonColorStyles[color],
         className
       )}

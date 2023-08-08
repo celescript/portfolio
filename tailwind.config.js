@@ -6,7 +6,11 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        '3xl': '0 -10px 500px -20px rgba(0, 0, 0, 0.5)',
+      },
+    },
     fontSize: {
       // PX TO REM
       44: '2.75rem',

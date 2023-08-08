@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-primary: #f9f871;
+}
+
 @layer utilities {
   .clip {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
