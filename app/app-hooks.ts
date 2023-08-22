@@ -4,8 +4,8 @@ import { useScroll } from '@/utils/hooks/use-scroll'
 
 export const AppHooks = () => {
   useScroll({
-    lerp: 0.2,
-    wheelMultiplier: 0.5,
+    lerp: 0.1,
+    wheelMultiplier: 1,
     smoothWheel: true,
     normalizeWheel: true,
   })

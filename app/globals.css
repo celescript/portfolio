@@ -11,6 +11,23 @@
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 
+  .shadowabout {
+    box-shadow: 0px -30px 160px -20px #ec489985,
+      0px 20px 490px 590px rgba(236, 72, 156, var(--glow-opacity));
+  }
+
+  .span-animation {
+    background-image: linear-gradient(black, black);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s ease-in, color 0.5s ease-in-out;
+  }
+
+  .active {
+    color: #ec4899;
+    background-size: 100% 100%;
+  }
+
   .bg-animation {
     animation: gradient 10s ease infinite;
     background-size: 200% 200%;
