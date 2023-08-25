@@ -9,7 +9,7 @@ export const Title = ({ headerRef }: TitleProps) => {
 
   return (
     <div className='overflow-hidden'>
-      <h1 className='font-extrabold text-20 text-center lg:text-left lg:text-44 translate-y-[100px] clip'>
+      <h1 className='font-extrabold text-24 text-center lg:text-left lg:text-44 translate-y-[100px] clip'>
         <span className='bg-clip-text text-transparent bg-gradient-to-r from-orange-300  via-pink-500 to-purple-400 bg-animation '>
           {text}
         </span>

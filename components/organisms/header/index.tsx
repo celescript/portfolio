@@ -19,18 +19,18 @@ export const Header = () => {
         {
           duration: 0.8,
           opacity: 1,
-          ease: 'power1.in',
+          ease: 'power1.out',
         },
-        '-=0.5'
+        '-=0.3'
       )
       .to(
         '.underlined',
         {
           duration: 0.8,
           width: '100%',
-          ease: 'power1.in',
+          ease: 'power4.out',
         },
-        '-=0.5'
+        '-=0.3'
       )
   }, [])
 

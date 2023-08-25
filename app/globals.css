@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --color-primary: #f9f871;
-}
-
 @layer utilities {
   .clip {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
@@ -20,12 +16,25 @@
     background-image: linear-gradient(black, black);
     background-size: 0 100%;
     background-repeat: no-repeat;
-    transition: background-size 0.5s ease-in, color 0.5s ease-in-out;
   }
 
-  .active {
-    color: #ec4899;
-    background-size: 100% 100%;
+  .span-text {
+    background-image: linear-gradient(
+      to right,
+      #db2777,
+      #db2777 50%,
+      #000000 50%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  .span-text.active {
+    background-position: 0 100%;
   }
 
   .bg-animation {

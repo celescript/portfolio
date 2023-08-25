@@ -1,41 +1,40 @@
 'use client'
 import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/all'
 import { useEffect, useRef } from 'react'
 
 export const Projects = () => {
   const projectscontainer = useRef<HTMLDivElement | null>(null)
 
-  useEffect(() => {
-    if (!projectscontainer.current) return
+  // useEffect(() => {
+  //   if (!projectscontainer.current) return
 
-    const scroll = gsap.to(projectscontainer.current, {
-      trigger: '.gallery',
-      start: 'top -20vh',
-      end: 'bottom bottom',
-      pin: '.right',
-    })
+  //   const scroll = gsap.to(projectscontainer.current, {
+  //     trigger: '.gallery',
+  //     start: 'top -20vh',
+  //     end: 'bottom bottom',
+  //     pin: '.right',
+  //   })
 
-    const tl = gsap.timeline()
+  //   const tl = gsap.timeline()
 
-    tl.to('.colors', {
-      y: 0,
-      duration: 1,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.title',
-        start: 'top 80%',
-        end: 'bottom 50%',
-        scrub: true,
-        toggleActions: 'play pause resume reset',
-      },
-    })
+  //   tl.to('.colors', {
+  //     y: 0,
+  //     duration: 1,
+  //     ease: 'none',
+  //     scrollTrigger: {
+  //       trigger: '.title',
+  //       start: 'top 80%',
+  //       end: 'bottom 50%',
+  //       scrub: true,
+  //       toggleActions: 'play pause resume reset',
+  //     },
+  //   })
 
-    return () => {
-      scroll.reverse()
-      tl.reverse()
-    }
-  }, [])
+  //   return () => {
+  //     scroll.reverse()
+  //     tl.reverse()
+  //   }
+  // }, [])
 
   return (
     <div className='relative flex bg-black gallery' ref={projectscontainer}>

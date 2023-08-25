@@ -2,6 +2,7 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { Title } from './title'
+import { CustomEase } from 'gsap/all'
 
 export const About = () => {
   const screenbig = useRef<HTMLDivElement | null>(null)
@@ -18,15 +19,18 @@ export const About = () => {
       },
     })
 
-    const spananim = gsap.to('.span-animation', {
+    const spananim = gsap.timeline({
       scrollTrigger: {
-        trigger: '.span-animation',
+        trigger: '.span-text',
         start: 'top 70%',
+        toggleClass: 'active',
       },
-      color: '#ec4899',
-      duration: 0.3,
+    })
+
+    spananim.to('.span-animation', {
+      duration: 1,
       backgroundSize: '100% 100%',
-      ease: 'slow.in',
+      ease: CustomEase.create('custom', 'M0,0 C0.075,0.82 0.165,1 1,1'),
     })
 
     tl.to('.background', {
@@ -34,34 +38,35 @@ export const About = () => {
       '--glow-opacity': 0.0,
       borderRadius: '0',
       duration: 1,
-      ease: 'out',
     })
 
     return () => {
       tl.reverse()
       tl.kill()
+
       spananim.kill()
     }
   }, [])
 
   return (
-    <div ref={screenbig} className='relative screen-big overflow-x-clip  '>
+    <div ref={screenbig} className='relative screen-big overflow-x-clip '>
       <div className='relative top-0 mx-auto h-screen w-full flex justify-center items-center'>
         <div
           style={{ '--glow-opacity': 0.4 } as any}
-          className='h-[100vh] w-full rounded-t-[200px] md:rounded-t-[300px] flex justify-center items-center overflow-hidden shadowabout background scale-[0.55] origin-[50%_10%]'
+          className='h-[100vh] w-full rounded-t-[100px] md:rounded-t-[300px] flex justify-center items-center overflow-hidden shadowabout background scale-[0.55] origin-[50%_10%]'
         >
-          {/* <Image src={colorMorph} alt='color morph' /> */}
           <div className=' bg-pink-600  bg-big absolute -inset-1 '></div>
 
           <div className='max-w-[600px] text-center -mt-20 mx-4 relative'>
-            <p className='text-black text-20 font-semibold leading-snug'>
+            <p className='text-black text-16 lg:text-20 font-semibold leading-snug'>
               I{`'`}m a 23 year old Frontend Developer, started learning to code
               in 2021 and I{`'`}ve been doing it ever since. I love coding, and
-              I{`'`}m always looking for new challenges.{' '}
-              <span className='span-animation'>
-                My tech stack includes React, Next, TypeScript, Tailwind, and
-                GSAP.{' '}
+              I{`'`}m always looking for new challenges. My tech stack includes{' '}
+              <span className='span-animation rounded-lg px-1'>
+                <span className='span-text overflow-hidden text-pink-500'>
+                  {' '}
+                  React, Next, TypeScript, Tailwind, and GSAP.
+                </span>
               </span>{' '}
               I{`'`}m always looking to learn new things and improve my skills.
             </p>

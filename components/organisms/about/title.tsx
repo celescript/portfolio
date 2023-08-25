@@ -15,14 +15,15 @@ export const Title = ({ screenbigref }: TitleProps) => {
       scrollTrigger: {
         trigger: screenbigref.current,
         start: '70% 85%',
+        end: 'bottom bottom',
       },
     })
 
     tl.to('.animated-letter', {
       y: 0,
       delay: 0,
-      stagger: 0.1,
-      duration: 0.15,
+      stagger: 0.05,
+      duration: 0.2,
     })
 
     // const animletter = gsap.to('.animated-letter', {
