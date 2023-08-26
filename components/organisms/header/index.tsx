@@ -7,31 +7,38 @@ export const Header = () => {
   const headerEl = useRef<HTMLElement | null>(null)
 
   useEffect(() => {
-    const tl = gsap.timeline()
+    // Header Animation Initialization
+    const headerAnimTimeline = gsap.timeline()
 
-    tl.to('.clip', {
-      y: 0,
+    // Move the '.clip' element to its original position with a bounce-back effect
+    headerAnimTimeline.to('.clip', {
+      y: '0%',
       duration: 1,
       ease: 'power2.out',
     })
-      .to(
-        '#subtitle',
-        {
-          duration: 0.8,
-          opacity: 1,
-          ease: 'power1.out',
-        },
-        '-=0.3'
-      )
-      .to(
-        '.underlined',
-        {
-          duration: 0.8,
-          width: '100%',
-          ease: 'power4.out',
-        },
-        '-=0.3'
-      )
+
+    // Fade in and move the '#subtitle' to its original position
+    headerAnimTimeline.to(
+      '#subtitle',
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        ease: 'power1.out',
+      },
+      '-=0.25'
+    ) // Overlapping the animation slightly for a more dynamic effect
+
+    // Expand the '.underlined' width to 100%
+    headerAnimTimeline.to(
+      '.underlined',
+      {
+        width: '100%',
+        duration: 0.8,
+        ease: 'power1.out',
+      },
+      '-=0.3'
+    )
   }, [])
 
   return (
@@ -42,7 +49,7 @@ export const Header = () => {
       <Title headerRef={headerEl} />
 
       <p
-        className='text-16 lg:text-20 mt-4 text-center max-w-[500px] text-white opacity-0'
+        className='text-16 lg:text-20 mt-4 text-center max-w-[500px] text-white opacity-0 transform translate-y-8'
         id='subtitle'
       >
         I{`'`}m a <span className='text-pink-500'>front end developer</span>{' '}

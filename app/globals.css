@@ -9,7 +9,7 @@
 
   .shadowabout {
     box-shadow: 0px -30px 160px -20px #ec489985,
-      0px 20px 490px 590px rgba(236, 72, 156, var(--glow-opacity));
+      0px 20px max(30vw, 490px) 470px rgba(236, 72, 156, var(--glow-opacity));
   }
 
   .span-animation {

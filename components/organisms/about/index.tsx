@@ -9,7 +9,10 @@ export const About = () => {
 
   useEffect(() => {
     if (!screenbig.current) return
-    const tl = gsap.timeline({
+
+    // Background Animation Initialization
+    const bgAnimTimeline = gsap.timeline({
+      paused: true,
       scrollTrigger: {
         trigger: screenbig.current,
         start: 'top bottom',
@@ -19,32 +22,36 @@ export const About = () => {
       },
     })
 
-    const spananim = gsap.timeline({
+    // Span Animation Initialization
+    const spanAnimTimeline = gsap.timeline({
+      paused: true,
       scrollTrigger: {
         trigger: '.span-text',
         start: 'top 70%',
         toggleClass: 'active',
+        once: true,
       },
     })
 
-    spananim.to('.span-animation', {
-      duration: 1,
-      backgroundSize: '100% 100%',
-      ease: CustomEase.create('custom', 'M0,0 C0.075,0.82 0.165,1 1,1'),
-    })
-
-    tl.to('.background', {
+    // Background Animation
+    bgAnimTimeline.to('.background', {
       scale: 1,
       '--glow-opacity': 0.0,
       borderRadius: '0',
       duration: 1,
     })
 
-    return () => {
-      tl.reverse()
-      tl.kill()
+    // Span Animation
+    spanAnimTimeline.to('.span-animation', {
+      duration: 1,
+      backgroundSize: '100% 100%',
+      ease: CustomEase.create('custom', 'M0,0 C0.075,0.82 0.165,1 1,1'),
+    })
 
-      spananim.kill()
+    // Cleanup function
+    return () => {
+      bgAnimTimeline.kill()
+      spanAnimTimeline.kill()
     }
   }, [])
 
