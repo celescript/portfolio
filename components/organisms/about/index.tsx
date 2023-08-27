@@ -10,48 +10,46 @@ export const About = () => {
   useEffect(() => {
     if (!screenbig.current) return
 
-    // Background Animation Initialization
-    const bgAnimTimeline = gsap.timeline({
-      paused: true,
-      scrollTrigger: {
-        trigger: screenbig.current,
-        start: 'top bottom',
-        end: 'bottom bottom',
-        scrub: true,
-        toggleActions: 'play pause resume reset',
-      },
-    })
+    // Background Animation Initialization with Scroll Trigger
+    const backgroundTimeline = gsap
+      .timeline({
+        paused: true,
+        scrollTrigger: {
+          trigger: screenbig.current,
+          start: 'top bottom',
+          end: 'bottom bottom',
+          scrub: true,
+          toggleActions: 'play pause resume reset',
+        },
+      })
+      .to('.background', {
+        scale: 1,
+        '--glow-opacity': 0.0,
+        borderRadius: '0',
+        duration: 1,
+      })
 
-    // Span Animation Initialization
-    const spanAnimTimeline = gsap.timeline({
-      paused: true,
-      scrollTrigger: {
-        trigger: '.span-text',
-        start: 'top 70%',
-        toggleClass: 'active',
-        once: true,
-      },
-    })
+    // Span Animation Initialization with Scroll Trigger
+    const spanTimeline = gsap
+      .timeline({
+        paused: true,
+        scrollTrigger: {
+          trigger: '.span-text',
+          start: 'top 70%',
+          toggleClass: 'active',
+          once: true,
+        },
+      })
+      .to('.span-animation', {
+        duration: 1,
+        backgroundSize: '100% 100%',
+        ease: CustomEase.create('custom', 'M0,0 C0.075,0.82 0.165,1 1,1'),
+      })
 
-    // Background Animation
-    bgAnimTimeline.to('.background', {
-      scale: 1,
-      '--glow-opacity': 0.0,
-      borderRadius: '0',
-      duration: 1,
-    })
-
-    // Span Animation
-    spanAnimTimeline.to('.span-animation', {
-      duration: 1,
-      backgroundSize: '100% 100%',
-      ease: CustomEase.create('custom', 'M0,0 C0.075,0.82 0.165,1 1,1'),
-    })
-
-    // Cleanup function
+    // Cleanup function to prevent memory leaks
     return () => {
-      bgAnimTimeline.kill()
-      spanAnimTimeline.kill()
+      backgroundTimeline.kill()
+      spanTimeline.kill()
     }
   }, [])
 
