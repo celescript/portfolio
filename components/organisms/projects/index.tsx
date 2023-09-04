@@ -2,6 +2,8 @@
 import { gsap } from 'gsap'
 import { useEffect, useRef } from 'react'
 import { MacPreview } from './mac-preview'
+import { projectData } from '@/utils/project-data'
+import { Project } from './atoms/project'
 
 export const Projects = () => {
   const projectsContainer = useRef<HTMLDivElement | null>(null)
@@ -27,19 +29,25 @@ export const Projects = () => {
   }, [])
 
   return (
-    <div className='relative' ref={projectsContainer}>
+    <div className='relative bg-black' ref={projectsContainer}>
       <div className='absolute h-screen w-full border overflow-x-hidden border-red-600 pinned'>
         <div className='absolute w-[50vw] -right-[15vw] top-1/2 translate-y-[-50%]'>
           <MacPreview projectsContainer={projectsContainer} />
         </div>
       </div>
       <div className='relative'>
-        {
-          // loop de proyectos
-        }
-        <div className='relative h-screen text-white'>Titulo de proyect</div>
-        <div className='relative h-screen text-white'>Titulo de proyect</div>
-        <div className='relative h-screen text-white'>Titulo de proyect</div>
+        {projectData.map((project, i) => {
+          return (
+            <Project
+              key={project.title}
+              i={i}
+              projectsContainer={projectsContainer}
+              total={projectData.length}
+              title={project.title}
+              description={project.description}
+            />
+          )
+        })}
       </div>
     </div>
   )
