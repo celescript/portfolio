@@ -25,7 +25,6 @@ export const About = () => {
       .to('.background', {
         scale: 1,
         '--glow-opacity': 0.0,
-        borderRadius: '0',
         duration: 1,
       })
 
@@ -58,7 +57,7 @@ export const About = () => {
       <div className='relative top-0 mx-auto h-screen w-full flex justify-center items-center'>
         <div
           style={{ '--glow-opacity': 0.4 } as any}
-          className='h-[100vh] w-full rounded-t-[100px] md:rounded-t-[300px] flex justify-center items-center overflow-hidden shadowabout background scale-[0.55] origin-[50%_10%]'
+          className='h-[100vh] w-full flex justify-center items-center overflow-hidden shadowabout background scale-[0.55] origin-[50%_10%]'
         >
           <div className=' bg-pink-600  bg-big absolute -inset-1 '></div>
 

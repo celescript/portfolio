@@ -29,8 +29,8 @@ export const MacPreview = ({
           )
         })}
       </div>
-      <div className='absolute inset-20 bg-red-700 blur-[150px] macshadow' />
-      <div className='absolute inset-24 bg-red-700 blur-[500px] macshadow' />
+      <div className='absolute inset-20 bg-[#DE5C89] blur-[150px] macshadow' />
+      <div className='absolute inset-24 bg-[#DE5C89] blur-[500px] macshadow' />
 
       <Image
         alt='maaaac'

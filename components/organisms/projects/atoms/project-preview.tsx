@@ -33,11 +33,10 @@ export default function ProjectPreview({
       .timeline({
         scrollTrigger: {
           trigger: projectscontainerRef.current,
-          start: (i / total) * 100 + '% 70%', // container, viewport
+          start: (i / total) * 100 + '% 50%', // container, viewport
           end: (i / total) * 100 + '% top',
           toggleActions: 'play complete reverse none',
           scrub: true,
-          markers: true,
         },
       })
       .to(currentImgRef.current, {
