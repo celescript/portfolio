@@ -20,6 +20,7 @@ export const MacPreview = ({
             project.image && (
               <ProjectPreview
                 i={i}
+                key={i}
                 projectscontainerRef={projectsContainer}
                 total={projectData.length}
                 data={project}
@@ -28,8 +29,8 @@ export const MacPreview = ({
           )
         })}
       </div>
-      <div className='absolute inset-20 bg-red-700 blur-[150px]' />
-      <div className='absolute inset-24 bg-red-700 blur-[500px]' />
+      <div className='absolute inset-20 bg-red-700 blur-[150px] macshadow' />
+      <div className='absolute inset-24 bg-red-700 blur-[500px] macshadow' />
 
       <Image
         alt='maaaac'

@@ -11,13 +11,12 @@ export const Projects = () => {
   useEffect(() => {
     if (!projectsContainer.current) return
 
-    const tl = gsap.to('.gallery', {
+    const tl = gsap.to(projectsContainer.current, {
       scrollTrigger: {
         trigger: projectsContainer.current,
         start: 'top top',
         end: 'bottom bottom',
         scrub: true,
-        markers: true,
         pin: '.pinned',
       },
     })
@@ -29,29 +28,36 @@ export const Projects = () => {
   }, [])
 
   return (
-    <div className='relative bg-black' ref={projectsContainer}>
-      <div className='absolute h-screen w-full border overflow-x-hidden border-red-600 pinned'>
-        <div className='absolute w-[50vw] -right-[15vw] top-1/2 translate-y-[-50%]'>
-          <MacPreview
-            projectData={projectData}
-            projectsContainer={projectsContainer}
-          />
-        </div>
-      </div>
-      <div className='relative'>
-        {projectData.map((project, i) => {
-          return (
-            <Project
-              key={project.title}
-              i={i}
+    <>
+      <div className='relative bg-black' ref={projectsContainer}>
+        {/* MAC OVERLAY */}
+        <div className='absolute h-screen w-full border overflow-x-hidden border-red-600 pinned'>
+          <div className='absolute w-[50vw] -right-[15vw] top-1/2 translate-y-[-50%]'>
+            <MacPreview
+              projectData={projectData}
               projectsContainer={projectsContainer}
-              total={projectData.length}
-              title={project.title}
-              description={project.description}
             />
-          )
-        })}
+          </div>
+        </div>
+
+        {/* CONTENT */}
+        <div className='bg-black w-full h-[5vh]'></div>
+        <div className='relative'>
+          {projectData.map((project, i) => {
+            return (
+              <Project
+                key={project.title}
+                i={i}
+                projectsContainer={projectsContainer}
+                total={projectData.length}
+                title={project.title}
+                description={project.description}
+              />
+            )
+          })}
+        </div>
+        <div className='bg-black w-full h-[5vh]'></div>
       </div>
-    </div>
+    </>
   )
 }

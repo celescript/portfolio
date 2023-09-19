@@ -18,8 +18,16 @@ export default function ProjectPreview({
 }: ProjectPreviewProps) {
   const currentImgRef = useRef<HTMLDivElement | null>(null)
 
+  // if i is 0, then the first image will be visible
+  // the first image should not have animation
+
   useEffect(() => {
     if (!projectscontainerRef.current || !currentImgRef.current) return
+
+    if (i === 0) {
+      currentImgRef.current.style.bottom = '0%'
+      return
+    }
 
     const tl = gsap
       .timeline({
@@ -27,14 +35,18 @@ export default function ProjectPreview({
           trigger: projectscontainerRef.current,
           start: (i / total) * 100 + '% 70%', // container, viewport
           end: (i / total) * 100 + '% top',
-          toggleActions: 'play pause resume reset',
-          markers: true,
+          toggleActions: 'play complete reverse none',
           scrub: true,
+          markers: true,
         },
       })
       .to(currentImgRef.current, {
         bottom: '0%',
-        ease: 'none',
+        ease: 'power2.out',
+      })
+      .to('.macshadow', {
+        backgroundColor: data.color,
+        ease: 'power2.out',
       })
 
     return () => {
@@ -46,13 +58,13 @@ export default function ProjectPreview({
     <div
       key={data.title}
       ref={currentImgRef}
-      className='absolute h-full w-full z-30 left-0 flex justify-center items-center bottom-[-100%]'
+      className='absolute h-full w-full z-30 left-0 flex justify-center items-center bottom-[-100%] bg-black'
     >
       <Image
         alt={data.title}
         fill
         src={'/images/projects/' + data.image}
-        className='relative w-full  aspect-[936/530] z-40'
+        className='relative w-full z-40 object-contain'
       ></Image>
     </div>
   )
