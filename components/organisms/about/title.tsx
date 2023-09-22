@@ -8,30 +8,25 @@ interface TitleProps {
 export const Title = ({ screenbigref }: TitleProps) => {
   const abouttitle = useRef<HTMLDivElement>(null)
 
-  const text: string = 'AboutMe'
+  const textAbout: string = 'About'
+  const textMe: string = 'Me'
 
   useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: screenbigref.current,
-        start: '70% 85%',
-        end: 'bottom bottom',
+        start: '30% 70%',
+        end: '50% 50% ',
+        scrub: true,
+        markers: true,
       },
     })
 
     tl.to('.animated-letter', {
       y: 0,
-      delay: 0,
       stagger: 0.05,
       duration: 0.2,
     })
-
-    // const animletter = gsap.to('.animated-letter', {
-    //     y: 0,
-    //     stagger: 0.5,
-    //     delay: 0.5,
-    //     duration: .5,
-    // })
 
     return () => {
       tl.reverse()
@@ -40,15 +35,20 @@ export const Title = ({ screenbigref }: TitleProps) => {
   }, [])
 
   return (
-    <div
-      ref={abouttitle}
-      className='absolute bottom-[-14vw] -left-[3vw] w-[103vw] overflow-hidden'
-    >
-      <h3 className='text-black text-[24vw] text-center font-bold whitespace-nowrap overflow-hidden tracking-tighter'>
-        {text.split('').map((letter, index) => (
+    <div ref={abouttitle} className='overflow-hidden'>
+      <h3 className='text-black text-[8vw] text-center font-bold overflow-hidden whitespace-nowrap tracking-tighter'>
+        {textAbout.split('').map((letter, index) => (
           <span
             key={index}
-            className='animated-letter translate-y-[24vw] transition-[0.1s] ease-in-out inline-block'
+            className='animated-letter translate-y-[100%] transition-[0.1s] ease-in-out inline-block'
+          >
+            {letter}
+          </span>
+        ))}{' '}
+        {textMe.split('').map((letter, index) => (
+          <span
+            key={index}
+            className='animated-letter translate-y-[100%] transition-[0.1s] ease-in-out inline-block'
           >
             {letter}
           </span>

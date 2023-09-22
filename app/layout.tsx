@@ -21,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={clx(inter.className, 'bg-black')}>
+        {/* TODO: ponerle grain al fondo y crear una navbar como esta https://www.giuligartner.com/ */}
         <AppHooks />
         {children}
       </body>

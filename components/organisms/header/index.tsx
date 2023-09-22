@@ -43,13 +43,13 @@ export const Header = () => {
 
   return (
     <header
-      className='px-4 h-screen flex flex-col items-center justify-center'
+      className='h-screen flex flex-col items-center px-[8%] md:px-[20%] justify-center'
       ref={headerEl}
     >
       <Title headerRef={headerEl} />
 
       <p
-        className='text-16 lg:text-20 mt-4 text-center max-w-[500px] text-white opacity-0 transform translate-y-8'
+        className='text-16 lg:text-24 mt-4 text-center max-w-[600px] text-white opacity-0 transform translate-y-8'
         id='subtitle'
       >
         I{`'`}m a <span className='text-pink-500'>front end developer</span>{' '}

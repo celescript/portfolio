@@ -5,17 +5,17 @@ import { Title } from './title'
 import { CustomEase } from 'gsap/all'
 
 export const About = () => {
-  const screenbig = useRef<HTMLDivElement | null>(null)
+  const containerAbout = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
-    if (!screenbig.current) return
+    if (!containerAbout.current) return
 
     // Background Animation Initialization with Scroll Trigger
     const backgroundTimeline = gsap
       .timeline({
         paused: true,
         scrollTrigger: {
-          trigger: screenbig.current,
+          trigger: containerAbout.current,
           start: 'top bottom',
           end: 'bottom bottom',
           scrub: true,
@@ -34,7 +34,7 @@ export const About = () => {
         paused: true,
         scrollTrigger: {
           trigger: '.span-text',
-          start: 'top 70%',
+          start: 'top 50%',
           toggleClass: 'active',
           once: true,
         },
@@ -53,16 +53,21 @@ export const About = () => {
   }, [])
 
   return (
-    <div ref={screenbig} className='relative screen-big overflow-x-clip '>
-      <div className='relative top-0 mx-auto h-screen w-full flex justify-center items-center'>
+    <div className='relative overflow-x-clip h-[200vh] '>
+      <div
+        ref={containerAbout}
+        className='sticky top-0 mx-auto h-screen w-full flex justify-center items-center'
+      >
         <div
           style={{ '--glow-opacity': 0.4 } as any}
-          className='h-[100vh] w-full flex justify-center items-center overflow-hidden shadowabout background scale-[0.55] origin-[50%_10%]'
+          className='h-[90vh] w-full flex justify-center background max-w-[90vw] items-center overflow-hidden shadowabout scale-[0.55] origin-[50%_10%]'
         >
-          <div className=' bg-pink-600  bg-big absolute -inset-1 '></div>
+          {/* TODO: probar que no se setee al 100% de la pantalla, que deje margenes y poner el about que salga de abajo pero chico en el medio */}
+          <div className=' bg-pink-600/80  bg-big absolute -inset-1 '></div>
 
-          <div className='max-w-[600px] text-center -mt-20 mx-4 relative'>
-            <p className='text-black text-16 lg:text-20 font-semibold leading-snug'>
+          <div className='text-center -mt-20 relative'>
+            <Title screenbigref={containerAbout} />
+            <p className='text-black max-w-[600px] mx-auto w-[90%] text-16 lg:text-20 font-semibold leading-snug'>
               I{`'`}m a 23 year old Frontend Developer, started learning to code
               in 2021 and I{`'`}ve been doing it ever since. I love coding, and
               I{`'`}m always looking for new challenges. My tech stack includes{' '}
@@ -75,8 +80,6 @@ export const About = () => {
               I{`'`}m always looking to learn new things and improve my skills.
             </p>
           </div>
-
-          <Title screenbigref={screenbig} />
         </div>
       </div>
     </div>

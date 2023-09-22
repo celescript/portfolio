@@ -10,6 +10,22 @@
   .shadowabout {
     box-shadow: 0px -30px 160px -20px #ec489985,
       0px 20px max(30vw, 490px) 470px rgba(236, 72, 156, var(--glow-opacity));
+    animation: glow 5s ease infinite;
+  }
+
+  @keyframes glow {
+    0% {
+      box-shadow: 0px -30px 160px -20px #ec489985,
+        0px 20px max(30vw, 490px) 470px rgba(236, 72, 156, var(--glow-opacity));
+    }
+    50% {
+      box-shadow: 0px -20px 100px -50px #ec489920,
+        0px 20px max(20vw, 300px) 300px rgba(236, 72, 156, var(--glow-opacity));
+    }
+    100% {
+      box-shadow: 0px -30px 160px -20px #ec489985,
+        0px 20px max(30vw, 490px) 470px rgba(236, 72, 156, var(--glow-opacity));
+    }
   }
 
   .span-animation {
