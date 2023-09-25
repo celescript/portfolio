@@ -49,7 +49,7 @@ export const Header = () => {
       <Title headerRef={headerEl} />
 
       <p
-        className='text-16 lg:text-24 mt-4 text-center max-w-[600px] text-white opacity-0 transform translate-y-8'
+        className='text-16 lg:text-20 mt-4 text-center max-w-[600px] text-white opacity-0 transform translate-y-8'
         id='subtitle'
       >
         I{`'`}m a <span className='text-pink-500'>front end developer</span>{' '}

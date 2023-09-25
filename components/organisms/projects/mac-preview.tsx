@@ -14,7 +14,7 @@ export const MacPreview = ({
 }: MacPreviewProps) => {
   return (
     <div className='relative'>
-      <div className='absolute overflow-hidden bg-pink-600/80 top-[2.6%] bottom-[11.5%] left-[13.7%] right-[13.7%] '>
+      <div className='absolute overflow-hidden z-[450] bg-pink-600/80 top-[2.6%] bottom-[11.5%] left-[13.7%] right-[13.7%] '>
         {projectData.map((project, i) => {
           return (
             project.image && (
@@ -33,9 +33,9 @@ export const MacPreview = ({
       {/* <div className='absolute inset-24 bg-[#DE5C89] blur-[100px] macshadow' /> */}
 
       <Image
-        alt='maaaac'
+        alt='mac display image'
         src={mac}
-        className='relative w-full aspect-[936/530]'
+        className='relative w-full aspect-[936/530] z-[400]'
         priority
       ></Image>
     </div>

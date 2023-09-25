@@ -67,7 +67,7 @@ export const About = () => {
 
           <div className='text-center -mt-20 relative'>
             <Title screenbigref={containerAbout} />
-            <p className='text-black max-w-[600px] mx-auto w-[90%] text-16 lg:text-20 font-semibold leading-snug'>
+            <p className='text-black font-mono max-w-[600px] mx-auto w-[90%] text-16 lg:text-20 font-semibold leading-snug'>
               I{`'`}m a 23 year old Frontend Developer, started learning to code
               in 2021 and I{`'`}ve been doing it ever since. I love coding, and
               I{`'`}m always looking for new challenges. My tech stack includes{' '}

@@ -7,6 +7,12 @@
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 
+  .grain {
+    @apply inset-0 absolute opacity-10;
+    background-image: url('/images/grain.png');
+    background-size: 400px;
+  }
+
   .shadowabout {
     box-shadow: 0px -30px 160px -20px #ec489985,
       0px 20px max(30vw, 490px) 470px rgba(236, 72, 156, var(--glow-opacity));

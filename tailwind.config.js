@@ -21,6 +21,10 @@ module.exports = {
       18: '1.125rem',
       16: '1rem',
     },
+    fontFamily: {
+      sans: ['Inter', 'sans-serif'],
+      mono: ['Ubuntu Mono', 'monospace'],
+    },
   },
   plugins: [],
 }

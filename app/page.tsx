@@ -7,6 +7,7 @@ export default function Home() {
   return (
     <>
       <Header />
+      {/* cambiar esto a hero */}
 
       <About />
 
