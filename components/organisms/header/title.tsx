@@ -1,10 +1,4 @@
-import { MutableRefObject } from 'react'
-
-interface TitleProps {
-  headerRef: MutableRefObject<HTMLElement | null>
-}
-
-export const Title = ({ headerRef }: TitleProps) => {
+export const Title = () => {
   const text = 'Celeste Fernandez'
 
   return (

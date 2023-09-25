@@ -22,7 +22,7 @@ export const useScroll = (options: LenisOptions = {}) => {
     const signal = abortController.signal
 
     const lenis = new Lenis(options)
-    lenis.on('scroll', (e: any) => {
+    lenis.on('scroll', () => {
       ScrollTrigger.update()
     })
 

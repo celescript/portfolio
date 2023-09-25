@@ -1,7 +1,7 @@
 'use client'
 import { Title } from './title'
 import gsap from 'gsap'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 
 export const Header = () => {
   const headerEl = useRef<HTMLElement | null>(null)
@@ -46,7 +46,7 @@ export const Header = () => {
       className='h-screen flex flex-col items-center px-[8%] md:px-[20%] justify-center'
       ref={headerEl}
     >
-      <Title headerRef={headerEl} />
+      <Title />
 
       <p
         className='text-16 lg:text-20 mt-4 text-center max-w-[600px] text-white opacity-0 transform translate-y-8'

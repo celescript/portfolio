@@ -1,18 +1,12 @@
 interface ProjectProps {
-  i: number
-  projectsContainer: React.RefObject<HTMLDivElement>
-  total: number
+  i?: number
+  projectsContainer?: React.RefObject<HTMLDivElement>
+  total?: number
   title: string
   description: string
 }
 
-export const Project = ({
-  i,
-  projectsContainer,
-  total,
-  title,
-  description,
-}: ProjectProps) => {
+export const Project = ({ title, description }: ProjectProps) => {
   return (
     <div className='relative h-[90vh] text-white flex flex-col justify-center align-middle'>
       <div className='w-[50vw] pl-[10vw] space-y-6 '>
