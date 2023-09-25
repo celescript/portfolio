@@ -31,8 +31,8 @@ export const Projects = () => {
     <>
       <div className='relative bg-black' ref={projectsContainer}>
         {/* MAC OVERLAY */}
-        <div className='absolute h-screen w-full overflow-x-hidden pinned'>
-          <div className='absolute w-[50vw] -right-[15vw] top-1/2 translate-y-[-50%]'>
+        <div className='absolute h-screen w-full overflow-x-hidden overflow-y-visible pinned'>
+          <div className='absolute w-[50vw] md:w-[60vw] -right-[15vw] top-1/2 translate-y-[-50%]'>
             <MacPreview
               projectData={projectData}
               projectsContainer={projectsContainer}

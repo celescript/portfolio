@@ -63,7 +63,7 @@ export const About = () => {
           className='h-[90vh] w-full flex justify-center background max-w-[90vw] items-center overflow-hidden shadowabout scale-[0.55] origin-[50%_10%]'
         >
           {/* TODO: probar que no se setee al 100% de la pantalla, que deje margenes y poner el about que salga de abajo pero chico en el medio */}
-          <div className=' bg-pink-600/80  bg-big absolute -inset-1 '></div>
+          <div className=' bg-pink-600  bg-big absolute -inset-1 '></div>
 
           <div className='text-center -mt-20 relative'>
             <Title screenbigref={containerAbout} />
