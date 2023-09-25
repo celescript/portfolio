@@ -13,7 +13,7 @@ export const projectData: ProjectConfig[] = [
     date: '2021-11-19',
     color: '#DE5C89',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl sed aliquam ultricies, nunc nunc aliquet nunc, vitae aliquam nisl nunc sed nunc. Donec euismod, nisl sed aliquam ultricies, nunc nunc aliquet nunc, vitae aliquam nisl nunc sed nunc.',
+      "My first JavaScript project, a keyboard that goes meow meow. I created it by recording my cat Alaska's meows. Simple and fun.",
     image: 'meow-keyboard.png',
     link: 'https://celescript.github.io/meow-keyboard/',
   },
