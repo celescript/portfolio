@@ -6,7 +6,11 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        '3xl': '0 -10px 500px -20px rgba(0, 0, 0, 0.5)',
+      },
+    },
     fontSize: {
       // PX TO REM
       44: '2.75rem',
@@ -16,6 +20,10 @@ module.exports = {
       20: '1.25rem',
       18: '1.125rem',
       16: '1rem',
+    },
+    fontFamily: {
+      sans: ['Inter', 'sans-serif'],
+      mono: ['Ubuntu Mono', 'monospace'],
     },
   },
   plugins: [],

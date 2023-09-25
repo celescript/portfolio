@@ -3,12 +3,14 @@
 import Lenis from '@studio-freight/lenis'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { CustomEase } from 'gsap/CustomEase'
 import { useEffect } from 'react'
 
 type LenisOptions = ConstructorParameters<typeof Lenis>[0]
 
 export const useScroll = (options: LenisOptions = {}) => {
   useEffect(() => {
+    gsap.registerPlugin(CustomEase)
     gsap.registerPlugin(ScrollTrigger)
   }, [])
 

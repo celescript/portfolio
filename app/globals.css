@@ -7,6 +7,58 @@
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 
+  .grain {
+    @apply inset-0 absolute opacity-10;
+    background-image: url('/images/grain.png');
+    background-size: 400px;
+  }
+
+  .shadowabout {
+    box-shadow: 0px -30px 160px -20px #ec489985,
+      0px 20px max(30vw, 490px) 470px rgba(236, 72, 156, var(--glow-opacity));
+    animation: glow 5s ease infinite;
+  }
+
+  @keyframes glow {
+    0% {
+      box-shadow: 0px -30px 160px -20px #ec489985,
+        0px 20px max(30vw, 490px) 470px rgba(236, 72, 156, var(--glow-opacity));
+    }
+    50% {
+      box-shadow: 0px -20px 100px -50px #ec489920,
+        0px 20px max(20vw, 300px) 300px rgba(236, 72, 156, var(--glow-opacity));
+    }
+    100% {
+      box-shadow: 0px -30px 160px -20px #ec489985,
+        0px 20px max(30vw, 490px) 470px rgba(236, 72, 156, var(--glow-opacity));
+    }
+  }
+
+  .span-animation {
+    background-image: linear-gradient(black, black);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+  }
+
+  .span-text {
+    background-image: linear-gradient(
+      to right,
+      #db2777,
+      #db2777 50%,
+      #000000 50%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  .span-text.active {
+    background-position: 0 100%;
+  }
+
   .bg-animation {
     animation: gradient 10s ease infinite;
     background-size: 200% 200%;
