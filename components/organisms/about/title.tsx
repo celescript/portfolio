@@ -18,7 +18,6 @@ export const Title = ({ screenbigref }: TitleProps) => {
         start: '30% 70%',
         end: '50% 50% ',
         scrub: true,
-        markers: true,
       },
     })
 
