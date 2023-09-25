@@ -8,11 +8,16 @@ import { Ubuntu_Mono } from 'next/font/google'
 import { AppHooks } from './app-hooks'
 import { Overlay } from '@/components/overlay'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
 const ubuntuMono = Ubuntu_Mono({
   subsets: ['latin'],
   display: 'swap',
   weight: '400',
+  variable: '--font-ubuntu-mono',
 })
 
 export const metadata = {
@@ -28,7 +33,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={clx(inter.className, 'bg-black')}>
+      <body className={clx(ubuntuMono.className, inter.className, 'bg-black')}>
         {/* TODO: ponerle grain al fondo y crear una navbar como esta https://www.giuligartner.com/ */}
         <AppHooks />
         {children}

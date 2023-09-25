@@ -22,8 +22,8 @@ module.exports = {
       16: '1rem',
     },
     fontFamily: {
-      sans: ['Inter', 'sans-serif'],
-      mono: ['Ubuntu Mono', 'monospace'],
+      sans: ['var(--font-inter)'],
+      mono: ['var(--font-ubuntu-mono)'],
     },
   },
   plugins: [],
