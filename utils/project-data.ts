@@ -22,7 +22,7 @@ export const projectData: ProjectConfig[] = [
     date: '2021-12-16',
     color: '#8BC34A',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl sed aliquam ultricies, nunc nunc aliquet nunc, vitae aliquam nisl nunc sed nunc. Donec euismod, nisl sed aliquam ultricies, nunc nunc aliquet nunc, vitae aliquam nisl nunc sed nunc.',
+      'Odele is an e-commerce created with React and Firebase. On this project, I learned about data fetching and the React lifecycle.',
     image: 'odele-ecommerce.png',
     link: 'https://odele.vercel.app/',
   },
@@ -31,7 +31,7 @@ export const projectData: ProjectConfig[] = [
     date: '2022-05-25',
     color: '#FFC107',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl sed aliquam ultricies, nunc nunc aliquet nunc, vitae aliquam nisl nunc sed nunc. Donec euismod, nisl sed aliquam ultricies, nunc nunc aliquet nunc, vitae aliquam nisl nunc sed nunc.',
+      'I created a Trello-like app for this challenge using Axios, Vite and Material-UI. Here, I experimented with creating data-fetching hooks.',
     image: 'cognizant-softvision.png',
     link: 'https://celestefernandez-cschallenge.vercel.app/',
   },
