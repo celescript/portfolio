@@ -3,22 +3,22 @@ import { Title } from './title'
 import gsap from 'gsap'
 import { useEffect, useRef } from 'react'
 
-export const Header = () => {
-  const headerEl = useRef<HTMLElement | null>(null)
+export const Hero = () => {
+  const heroEl = useRef<HTMLElement | null>(null)
 
   useEffect(() => {
     // Header Animation Initialization
-    const headerAnimTimeline = gsap.timeline()
+    const heroAnimTimeline = gsap.timeline()
 
     // Move the '.clip' element to its original position with a bounce-back effect
-    headerAnimTimeline.to('.clip', {
+    heroAnimTimeline.to('.clip', {
       y: '0%',
       duration: 1,
       ease: 'power2.out',
     })
 
     // Fade in and move the '#subtitle' to its original position
-    headerAnimTimeline.to(
+    heroAnimTimeline.to(
       '#subtitle',
       {
         y: 0,
@@ -30,7 +30,7 @@ export const Header = () => {
     ) // Overlapping the animation slightly for a more dynamic effect
 
     // Expand the '.underlined' width to 100%
-    headerAnimTimeline.to(
+    heroAnimTimeline.to(
       '.underlined',
       {
         width: '100%',
@@ -44,7 +44,7 @@ export const Header = () => {
   return (
     <header
       className='h-screen flex flex-col items-center px-[8%] md:px-[20%] justify-center'
-      ref={headerEl}
+      ref={heroEl}
     >
       <Title />
 

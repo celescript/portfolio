@@ -1,13 +1,12 @@
 import { About } from '@/components/organisms/about'
-import { Header } from '@/components/organisms/header'
+import { Hero } from '@/components/organisms/hero'
 
 import { Projects } from '@/components/organisms/projects'
 
 export default function Home() {
   return (
     <>
-      <Header />
-      {/* cambiar esto a hero */}
+      <Hero />
 
       <About />
 
