@@ -60,7 +60,7 @@
   }
 
   .bg-animation {
-    animation: gradient 10s ease infinite;
+    animation: gradient 5s ease infinite;
     background-size: 200% 200%;
   }
 
