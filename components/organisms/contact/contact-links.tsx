@@ -9,20 +9,24 @@ interface ContactLinksProps {
 
 export const ContactLinks = ({ link, key, icon, title }: ContactLinksProps) => {
   return (
-    <div
+    <a
       key={key}
-      className='flex flex-col-reverse justify-between items-center space-x-2 px-2 py-4 '
+      href={link}
+      target='_blank'
+      rel='noreferrer'
+      className='mt-14 flex-1'
     >
-      {/* TODO: ARREGLAR ESTO PARA Q TODO SEA UN LINK */}
-      <a
-        href={link}
-        target='_blank'
-        rel='noreferrer'
-        className='text-gray-600 text-16 font-mono mt-2 '
-      >
-        {title}
-      </a>
-      <Image src={icon} alt={title} width={45} height={45} />
-    </div>
+      <div className='flex flex-col justify-between items-center '>
+        <Image
+          src={icon}
+          alt={title}
+          width={45}
+          height={45}
+          className='max-w-[45px] max-h-[45px]
+        '
+        />
+        <p className='text-gray-300 text-16 font-mono mt-6'>{title}</p>
+      </div>
+    </a>
   )
 }

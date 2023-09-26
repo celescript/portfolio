@@ -37,7 +37,7 @@ export const Contact = () => {
       <p className='font-mono text-24 md:text-44 text-white'>
         Let{"'"}s talk!{'\n '}
       </p>
-      <div className='flex justify-between flex-wrap space-x-4 w-[90%] max-w-[390px]'>
+      <div className='flex justify-between flex-wrap w-[90%] max-w-[400px]'>
         {contactData.map((contactLink) => (
           <ContactLinks
             key={contactLink.index}

@@ -29,9 +29,9 @@ export const Projects = () => {
 
   return (
     <>
-      <div className='relative bg-black' ref={projectsContainer}>
+      <div className='relative' ref={projectsContainer}>
         {/* MAC OVERLAY */}
-        <div className='absolute h-screen w-full overflow-x-hidden overflow-y-visible pinned'>
+        <div className='absolute h-screen w-full  overflow-y-visible pinned'>
           <div className='absolute w-[50vw] md:w-[60vw] -right-[15vw] top-1/2 translate-y-[-50%]'>
             <MacPreview
               projectData={projectData}
@@ -41,7 +41,7 @@ export const Projects = () => {
         </div>
 
         {/* CONTENT */}
-        <div className='bg-black w-full h-[5vh]'></div>
+        <div className=' w-full h-[5vh]'></div>
         <div className='relative'>
           {projectData.map((project, i) => {
             return (
@@ -56,7 +56,7 @@ export const Projects = () => {
             )
           })}
         </div>
-        <div className='bg-black w-full h-[5vh]'></div>
+        <div className=' w-full h-[5vh]'></div>
       </div>
     </>
   )
