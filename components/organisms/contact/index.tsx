@@ -34,7 +34,7 @@ export const contactData: ContactLink[] = [
 export const Contact = () => {
   return (
     <div className='h-screen w-screen flex flex-col justify-center align-middle items-center '>
-      <p className='font-mono text-24 md:text-44 text-white'>
+      <p className='font-mono text-36 md:text-44 text-white'>
         Let{"'"}s talk!{'\n '}
       </p>
       <div className='flex justify-between flex-wrap w-[90%] max-w-[400px]'>

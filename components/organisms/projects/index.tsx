@@ -35,7 +35,7 @@ export const Projects = () => {
       >
         {/* MAC OVERLAY */}
         <div className='absolute h-screen w-full pinned z-[100]'>
-          <div className='absolute w-full md:w-[50vw] lg:w-[60vw] left-0 max-w-[400px] md:max-w-none md:-right-[15vw] md:left-auto right-0 bottom-0 md:bottom-1/2 translate-y-[50%]'>
+          <div className='absolute w-full md:w-[50vw] lg:w-[60vw] left-0 max-w-[400px] md:max-w-none md:-right-[15vw] md:left-auto right-0 bottom-[10vh] md:bottom-1/2 md:translate-y-[50%]'>
             <MacPreview
               projectData={projectData}
               projectsContainer={projectsContainer}
@@ -45,7 +45,7 @@ export const Projects = () => {
 
         {/* CONTENT */}
         <div className='w-full h-[5vh]'></div>
-        <div className='relative z-50 pt-4 md:pt-0'>
+        <div className='relative z-50 pt-[10vh] md:pt-0'>
           {projectData.map((project, i) => {
             return (
               <Project
