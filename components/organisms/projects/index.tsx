@@ -29,7 +29,7 @@ export const Projects = () => {
 
   return (
     <>
-      <div className='relative' ref={projectsContainer}>
+      <div className='relative overflow-x-hidden' ref={projectsContainer}>
         {/* MAC OVERLAY */}
         <div className='absolute h-screen w-full  overflow-y-visible pinned'>
           <div className='absolute w-[50vw] md:w-[60vw] -right-[15vw] top-1/2 translate-y-[-50%]'>
