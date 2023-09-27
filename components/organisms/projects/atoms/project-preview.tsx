@@ -46,6 +46,7 @@ export default function ProjectPreview({
       .to('.macshadow', {
         backgroundColor: data.color,
         ease: 'power2.out',
+        zIndex: 100,
       })
 
     return () => {

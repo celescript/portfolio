@@ -29,7 +29,7 @@ export const MacPreview = ({
           )
         })}
       </div>
-      <div className='absolute inset-x-28 inset-y-10 bg-[#DE5C89] blur-[90px] macshadow' />
+      <div className='absolute inset-x-28 inset-y-10 bg-[#DE5C89] blur-[50px]  md:blur-[90px] macshadow' />
       {/* <div className='absolute inset-24 bg-[#DE5C89] blur-[100px] macshadow' /> */}
 
       <Image
