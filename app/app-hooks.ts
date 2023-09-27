@@ -8,8 +8,8 @@ export const AppHooks = () => {
     // smoothWheel: true,
     // normalizeWheel: true,
     touchMultiplier: 0.8,
-    // touchInertiaMultiplier: 0.5,
     wheelMultiplier: 0.8,
+    smoothTouch: false,
   })
 
   return null
