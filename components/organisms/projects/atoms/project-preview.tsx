@@ -39,7 +39,6 @@ export default function ProjectPreview({
           end: `${start}% -30%`,
           toggleActions: 'play complete reverse none',
           scrub: true,
-          markers: true,
         },
       })
       .to(currentImgRef.current, {
