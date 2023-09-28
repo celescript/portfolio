@@ -6,10 +6,10 @@ export const AppHooks = () => {
   useScroll({
     // lerp: 0.5,
     smoothWheel: true,
-    // normalizeWheel: true,
+    normalizeWheel: true,
     touchMultiplier: 1.2,
     wheelMultiplier: 0.8,
-    smoothTouch: true,
+    smoothTouch: false,
   })
 
   return null
