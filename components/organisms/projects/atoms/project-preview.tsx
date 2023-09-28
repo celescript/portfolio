@@ -29,23 +29,24 @@ export default function ProjectPreview({
       return
     }
 
+    const start = Math.round((i / total) * 100)
+
     const tl = gsap
       .timeline({
         scrollTrigger: {
           trigger: projectscontainerRef.current,
-          start: (i / total) * 100 + '% 50%', // container, viewport
-          end: (i / total) * 100 + '% top',
+          start: `${start}% 60%`, // container, viewport
+          end: `${start}% -30%`,
           toggleActions: 'play complete reverse none',
           scrub: true,
+          markers: true,
         },
       })
       .to(currentImgRef.current, {
         bottom: '0%',
-        ease: 'power2.out',
       })
       .to('.macshadow', {
         backgroundColor: data.color,
-        ease: 'power2.out',
         zIndex: 100,
       })
 

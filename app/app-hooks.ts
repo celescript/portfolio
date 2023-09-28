@@ -9,7 +9,7 @@ export const AppHooks = () => {
     normalizeWheel: true,
     touchMultiplier: 1.2,
     wheelMultiplier: 0.8,
-    smoothTouch: false,
+    smoothTouch: true,
   })
 
   return null

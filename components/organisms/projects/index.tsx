@@ -29,6 +29,7 @@ export const Projects = () => {
 
   return (
     <>
+      <div className='w-full h-[5vh]'></div>
       <div className='relative' ref={projectsContainer}>
         {/* MAC OVERLAY */}
         <div className='absolute h-screen w-full pinned z-[100]'>
@@ -41,8 +42,7 @@ export const Projects = () => {
         </div>
 
         {/* CONTENT */}
-        <div className='w-full h-[5vh]'></div>
-        <div className='relative z-50 pt-[10vh] md:pt-0'>
+        <div className='relative z-50 md:pt-0'>
           {projectData.map((project, i) => {
             return (
               <Project
@@ -56,8 +56,8 @@ export const Projects = () => {
             )
           })}
         </div>
-        <div className=' w-full h-[5vh]'></div>
       </div>
+      <div className=' w-full h-[5vh]'></div>
     </>
   )
 }
