@@ -63,6 +63,7 @@ export default function ProjectPreview({
       <Image
         alt={data.title}
         fill
+        priority
         src={'/images/projects/' + data.image}
         className='relative w-full z-40 object-contain'
       ></Image>
