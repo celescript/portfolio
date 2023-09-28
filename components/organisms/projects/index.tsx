@@ -18,7 +18,6 @@ export const Projects = () => {
         end: 'bottom bottom',
         scrub: true,
         pin: '.pinned',
-        pinSpacing: false,
       },
     })
 
