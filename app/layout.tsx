@@ -37,7 +37,7 @@ export default function RootLayout({
         className={clx(
           ubuntuMono.className,
           inter.className,
-          'bg-black relative'
+          'bg-black relative overflow-hidden'
         )}
       >
         <AppHooks />
