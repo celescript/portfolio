@@ -35,7 +35,6 @@ export const MacPreview = ({
         alt='mac display image'
         src={mac}
         className='relative w-full aspect-[936/530] z-[400]'
-        priority
       ></Image>
     </div>
   )

@@ -23,9 +23,10 @@ export const About = () => {
         },
       })
       .to('.background', {
-        scale: 1,
+        transform: 'scale(1)',
         '--glow-opacity': 0.0,
         duration: 1,
+        willChange: 'transform, --glow-opacity',
       })
 
     // Span Animation Initialization with Scroll Trigger
