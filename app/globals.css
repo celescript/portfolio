@@ -8,10 +8,21 @@
   }
 
   .grain {
-    @apply inset-0 absolute opacity-[0.07];
+    @apply inset-0 absolute opacity-[0.1];
     background-image: url('/images/grain.png');
     background-size: 400px;
+    background-repeat: repeat;
     mix-blend-mode: normal;
+    animation: grain 0.25s steps(10) infinite;
+  }
+
+  @keyframes grain {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 400px 400px;
+    }
   }
 
   .shadowabout {
