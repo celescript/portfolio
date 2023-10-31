@@ -34,8 +34,8 @@ export const Title = ({ screenbigref }: TitleProps) => {
   }, [])
 
   return (
-    <div ref={abouttitle} className='overflow-hidden'>
-      <h3 className='text-black text-44 md:text-[8vw] text-center font-bold overflow-hidden whitespace-nowrap tracking-tighter'>
+    <div ref={abouttitle} className='overflow-hidden text-center'>
+      <h3 className='text-black text-5xl md:text-8xl   overflow-hidden whitespace-nowrap tracking-tighter'>
         {textAbout.split('').map((letter, index) => (
           <span
             key={index}

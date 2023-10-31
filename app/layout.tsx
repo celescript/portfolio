@@ -2,23 +2,10 @@ import './globals.css'
 import { clx } from '@/utils/clx'
 
 // fonts
-import { Inter } from 'next/font/google'
-// ubuntu mono
-import { Ubuntu_Mono } from 'next/font/google'
+import { GeistSans, GeistMono } from 'geist/font'
+
 import { AppHooks } from './app-hooks'
 import { Overlay } from '@/components/overlay'
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-})
-const ubuntuMono = Ubuntu_Mono({
-  subsets: ['latin'],
-  display: 'swap',
-  weight: '400',
-  variable: '--font-ubuntu-mono',
-})
 
 export const metadata = {
   title: 'Celeste Fernandez Portfolio',
@@ -35,8 +22,8 @@ export default function RootLayout({
     <html lang='en'>
       <body
         className={clx(
-          ubuntuMono.className,
-          inter.className,
+          GeistSans.variable,
+          GeistMono.variable,
           'bg-black relative overflow-x-hidden'
         )}
       >

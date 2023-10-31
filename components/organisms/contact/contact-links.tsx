@@ -25,7 +25,7 @@ export const ContactLinks = ({ link, key, icon, title }: ContactLinksProps) => {
           className='max-w-[45px] max-h-[45px]
         '
         />
-        <p className='text-gray-300 text-[0.8rem] md:text-16 font-mono mt-6'>
+        <p className='text-gray-300 text-sm lg:text-lg font-mono mt-6'>
           {title}
         </p>
       </div>
