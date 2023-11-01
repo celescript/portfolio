@@ -1,7 +1,6 @@
 'use client'
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
-import { Title } from './title'
 import { CustomEase } from 'gsap/all'
 
 export const About = () => {
@@ -66,7 +65,6 @@ export const About = () => {
           <div className=' bg-pink-600  bg-big absolute -inset-1 '></div>
 
           <div className='text-center font-mono font-regular -mt-20 relative'>
-            <Title screenbigref={containerAbout} />
             <p className='text-black font-mono max-w-[600px] text-left mt-5 mx-auto w-[90%] text-sm lg:text-lg font-normal leading-snug'>
               I{`'`}m a 23 year old Frontend Developer, started learning to code
               in 2021 and I{`'`}ve been doing it ever since. I love coding, and

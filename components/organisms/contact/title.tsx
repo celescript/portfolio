@@ -8,15 +8,17 @@ interface TitleProps {
 export const Title = ({ screenbigref }: TitleProps) => {
   const abouttitle = useRef<HTMLDivElement>(null)
 
-  const textAbout: string = 'About'
-  const textMe: string = 'Me'
+  const text1: string = "Let's"
+  const text2: string = 'talk!'
 
   useEffect(() => {
+    if (!screenbigref.current) return
+
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: screenbigref.current,
-        start: '30% 70%',
-        end: '50% 50% ',
+        start: '20% 70%',
+        end: '50% 60% ',
         scrub: true,
       },
     })
@@ -35,8 +37,8 @@ export const Title = ({ screenbigref }: TitleProps) => {
 
   return (
     <div ref={abouttitle} className='overflow-hidden text-center'>
-      <h3 className='text-black text-5xl md:text-8xl   overflow-hidden whitespace-nowrap tracking-tighter'>
-        {textAbout.split('').map((letter, index) => (
+      <h3 className='text-white text-5xl md:text-8xl font-mono overflow-hidden whitespace-nowrap tracking-tighter'>
+        {text1.split('').map((letter, index) => (
           <span
             key={index}
             className='animated-letter translate-y-[100%] transition-[0.1s] ease-in-out inline-block'
@@ -44,7 +46,7 @@ export const Title = ({ screenbigref }: TitleProps) => {
             {letter}
           </span>
         ))}{' '}
-        {textMe.split('').map((letter, index) => (
+        {text2.split('').map((letter, index) => (
           <span
             key={index}
             className='animated-letter translate-y-[100%] transition-[0.1s] ease-in-out inline-block'

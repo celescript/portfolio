@@ -1,4 +1,7 @@
+'use client'
+import { useEffect, useRef } from 'react'
 import { ContactLinks } from './contact-links'
+import { Title } from './title'
 
 export interface ContactLink {
   link: string
@@ -32,11 +35,15 @@ export const contactData: ContactLink[] = [
 ]
 
 export const Contact = () => {
+  const containerContact = useRef<HTMLDivElement | null>(null)
+
   return (
-    <div className='h-screen w-screen flex flex-col justify-center align-middle items-center '>
-      <p className='font-mono text-xl md:text-5xl   text-white'>
-        Let{"'"}s talk!{'\n '}
-      </p>
+    <div
+      className='h-screen w-screen flex flex-col justify-center align-middle items-center '
+      ref={containerContact}
+    >
+      <Title screenbigref={containerContact} />
+
       <div className='flex justify-between flex-wrap text-sm lg:text-lg w-[90%] max-w-xl'>
         {contactData.map((contactLink) => (
           <ContactLinks
