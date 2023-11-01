@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import { ContactLinks } from './contact-links'
 import { Title } from './title'
 
