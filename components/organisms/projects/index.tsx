@@ -11,7 +11,7 @@ export const Projects = () => {
 
   useEffect(() => {
     // If it's a mobile device, don't initialize the scroll animations.
-    if (window.innerWidth < 600) {
+    if (window.innerWidth < 640) {
       setIsMobile(true)
       return
     }
