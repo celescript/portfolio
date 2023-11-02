@@ -52,7 +52,7 @@ export default function ProjectPreview({
     return () => {
       tl.kill()
     }
-  }, [i, total])
+  }, [i, total, data.color, projectscontainerRef])
 
   return (
     <div

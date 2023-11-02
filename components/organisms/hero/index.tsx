@@ -49,7 +49,7 @@ export const Hero = () => {
       <Title />
 
       <p
-        className='text-sm lg:text-lg font-mono mt-4 text-center max-w-[600px] text-white opacity-0 transform translate-y-8'
+        className='text-sm lg:text-lg font-mono md:mt-4 text-center max-w-[600px] text-white opacity-0 transform translate-y-8'
         id='subtitle'
       >
         I{`'`}m a <span className='text-orange-300'>front end developer</span>{' '}

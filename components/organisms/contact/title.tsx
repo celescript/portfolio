@@ -33,7 +33,7 @@ export const Title = ({ screenbigref }: TitleProps) => {
       tl.reverse()
       tl.kill()
     }
-  }, [])
+  }, [screenbigref])
 
   return (
     <div ref={abouttitle} className='overflow-hidden text-center'>
