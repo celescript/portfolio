@@ -10,23 +10,22 @@ export const About = () => {
     if (!containerAbout.current) return
 
     // Background Animation Initialization with Scroll Trigger
-    const backgroundTimeline = gsap
-      .timeline({
-        paused: true,
-        scrollTrigger: {
-          trigger: containerAbout.current,
-          start: 'top bottom',
-          end: 'bottom bottom',
-          scrub: true,
-          toggleActions: 'play pause resume reset',
-        },
-      })
-      .to('.background', {
-        transform: 'scale(1)',
-        '--glow-opacity': 0.0,
-        duration: 1,
-        willChange: 'transform, --glow-opacity',
-      })
+    const backgroundTimeline = gsap.timeline({
+      paused: true,
+      scrollTrigger: {
+        trigger: containerAbout.current,
+        start: 'top bottom',
+        end: 'bottom bottom',
+        scrub: true,
+        toggleActions: 'play pause resume reset',
+      },
+    })
+    // .to('.background', {
+    //   transform: 'scale(1)',
+    //   '--glow-opacity': 0.0,
+    //   duration: 1,
+    //   willChange: 'transform, --glow-opacity',
+    // })
 
     // Span Animation Initialization with Scroll Trigger
     const spanTimeline = gsap
@@ -53,16 +52,16 @@ export const About = () => {
   }, [])
 
   return (
-    <div className='relative overflow-x-clip h-[200vh] '>
+    <div className='relative overflow-x-clip h-[200vh]  '>
       <div
         ref={containerAbout}
-        className='sticky top-0 mx-auto h-screen w-full flex justify-center items-center'
+        className='sticky top-0 mx-auto h-screen w-full flex p-[10%] justify-center items-center'
       >
         <div
-          style={{ '--glow-opacity': 0.4 } as any}
-          className='h-[90vh] w-full flex justify-center background max-w-[90vw] items-center overflow-hidden shadowabout scale-[0.55] origin-[50%_10%]'
+          // style={{ '--glow-opacity': 0.4 } as any}
+          className='h-[90vh] w-full flex justify-center background max-w-[90vw]  items-center overflow-hidden shadowabout'
         >
-          <div className=' bg-pink-600  bg-big absolute -inset-1 '></div>
+          <div className=' bg-pink-600  bg-big absolute -inset-1 mx-4 my-3 md:mx-28 md:my-10 '></div>
 
           <div className='text-center font-mono font-regular -mt-20 relative'>
             <p className='text-black font-mono max-w-[600px] text-left mt-5 mx-auto w-[90%] text-sm lg:text-lg font-normal leading-snug'>
